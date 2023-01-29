@@ -2,3 +2,6 @@
  width: 20px;
  padding-right: 5px;
 }
+#typed{
+  white-space: pre;
+}
