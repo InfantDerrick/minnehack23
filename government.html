@@ -27,17 +27,17 @@
           <div class="container-fluid px-0">
             <div class="dropdown">
               <a href="#" class="btn bg-gradient-light dropdown-toggle " data-bs-toggle="dropdown" id="navbarDropdownMenuLink2">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnwANENjs3gP8ucWvO-eJ9lRUz3sPDY0hNg&usqp=CAU" class="location-icon"/>&nbsp;Civitas: Acton
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnwANENjs3gP8ucWvO-eJ9lRUz3sPDY0hNg&usqp=CAU" class="location-icon"/>&nbsp;Civitas: <span id="com1"></span>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                   <li>
                       <a class="dropdown-item" href="#">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnwANENjs3gP8ucWvO-eJ9lRUz3sPDY0hNg&usqp=CAU" class="location-icon"/>&nbsp;Acton
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnwANENjs3gP8ucWvO-eJ9lRUz3sPDY0hNg&usqp=CAU" class="location-icon"/>&nbsp;<span id="com2"></span>
                       </a>
                   </li>
                   <li>
                       <a class="dropdown-item" href="#">
-                        <img src="https://cdn.britannica.com/45/2345-004-CA9B0D10/flag-pine-tree-Massachusetts-state-field-arms-1971.jpg" class="location-icon"/>&nbsp;Massachussetts
+                        <img src="https://cdn.britannica.com/45/2345-004-CA9B0D10/flag-pine-tree-Massachusetts-state-field-arms-1971.jpg" class="location-icon"/>&nbsp;<span id="com3"></span>
                       </a>
                   </li>
                   <li>
@@ -98,7 +98,7 @@
                   </a>
                 </li>
                 <li class="nav-item mx-2">
-                  <a href="javascript:;" class="avatar avatar-sm rounded-circle">
+                  <a href="javascript:;" id="logout" class="avatar avatar-sm rounded-circle">
                     <img alt="Image placeholder" src="./assets/img/team-4.jpg">
                   </a>
                 </li>
@@ -117,7 +117,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8 text-center mx-auto my-auto">
             <h1 class="text-white">Change, accessible.</h1>
-            <p class="lead mb-4 text-white opacity-8">As a community, we can share our resources. If you have food or clothes you want to give, here's your chance!</p>
+            <p class="lead mb-4 text-white opacity-8">We are the body of government, use your voice to make steps for our society!</p>
           </div>
         </div>
       </div>
@@ -140,7 +140,7 @@
         <div class="row">
           <div class="col-12 mx-auto">
             <div class="mt-n8 mt-md-n9 text-center">
-              <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" id="img" src="./assets/img/bruce-mars.jpg" alt="pol" loading="lazy">
+              <img class="avatar avatar-xxl shadow-xl position-relative z-index-2" id="img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/1200px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg" alt="pol" loading="lazy">
             </div>
             <div class="row py-5">
               <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mx-auto">
@@ -377,6 +377,9 @@
         getDoc(nameRef).then(nameSnap => {
           if(nameSnap.exists()) {
             getPoliticians(nameSnap.data().address);
+            document.getElementById('com1').innerHTML = nameSnap.data().coms[0];
+            document.getElementById('com2').innerHTML = nameSnap.data().coms[0];
+            document.getElementById('com3').innerHTML = nameSnap.data().coms[1];
           }
         });
       } else {
