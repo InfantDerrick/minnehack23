@@ -519,6 +519,31 @@
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="../assets/js/material-kit.min.js?v=3.0.0" type="text/javascript"></script>
+    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js'
+  
+      // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+      import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.16.0/firebase-analytics.js'
+  
+      // Add Firebase products that you want to use
+      import { getAuth } from 'https://www.gstatic.com/firebasejs/9.16.0/firebase-auth.js'
+      import { getFirestore } from 'https://www.gstatic.com/firebasejs/9.16.0/firebase-firestore.js'
+      const firebaseConfig = {
+        apiKey: "AIzaSyBu2vC4aQg6TvJ_9XicPOJhbp_NbyoH-6Y",
+        authDomain: "civitas-4b8e7.firebaseapp.com",
+        projectId: "civitas-4b8e7",
+        storageBucket: "civitas-4b8e7.appspot.com",
+        messagingSenderId: "702417617562",
+        appId: "1:702417617562:web:e501a905826e7f09f2d523",
+        measurementId: "G-4380018QSL"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      console.log(firebase);
+    </script>
 </body>
 
 </html>

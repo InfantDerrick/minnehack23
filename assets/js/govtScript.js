@@ -1,3 +1,8 @@
+const loc = "Acton, MA";
+let allPols = [];
+
+getPoliticians(loc);
+
 class Politician{
   constructor(name, position, level, power, party, address, city, state, zip, phone, wikipedia){
     this.name = name;
@@ -14,19 +19,29 @@ class Politician{
     if(wikipedia != ""){
       
       let wikiName = wikipedia.substring(wikipedia.lastIndexOf('/') + 1);
-      const imageReq = wikiImageQuery(wikiName);
-      console.log(wikiName);
-      let key = Object.keys(imageReq.query.pages)[0];
-      this.image = imageReq.query.pages[key].thumbnail.source;
-      const descReq = wikiDescQuery(wikiName);
-      key = Object.keys(descReq.query.pages)[0];
-      this.desc = descReq.query.pages[key].extract;
+      wikiImageQuery(wikiName, this); 
+      wikiDescQuery(wikiName, this);      
+      // let key = Object.keys(imageReq.query.pages)[0];
+      // this.image = imageReq.query.pages[key].thumbnail.source;
+      // const descReq = wikiDescQuery(wikiName);
+      // key = Object.keys(descReq.query.pages)[0];
+      // this.desc = descReq.query.pages[key].extract;
     }else{
       this.image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTa67U8mBFqJ5DLUJPWbWMJ5QUBMCwlyvJEvkIKSCr8Hw&s"
       this.desc = name;
     }
       
     //TODO wikipedia
+  }
+  setImage(img){
+
+    let key = Object.keys(img.query.pages)[0];
+    if(img.query.pages[key].thumbnail['source'])
+      this.image = img.query.pages[key].thumbnail.source;
+  }
+  setDesc(desc){
+    let key = Object.keys(desc.query.pages)[0];
+    this.desc = desc.query.pages[key].extract;
   }
 }
 
@@ -35,7 +50,7 @@ const comparePols = (pola, polb) => {
   if(pola.power > polb.power) return 1;
   return 0;
 }
-function getPoliticians(query, callback = (printing) => {makePoliticians(printing)}) {
+function getPoliticians(query, callback = (printing) => {makePoliticians(printing, allPols)}) {
   theUrl = `https://civicinfo.googleapis.com/civicinfo/v2/representatives?address=${query}&key=AIzaSyBC0im9IZ8UfIFW9AkdW6q41XpCfL9z-CM`
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.onreadystatechange = function() { 
@@ -45,35 +60,51 @@ function getPoliticians(query, callback = (printing) => {makePoliticians(printin
   xmlHttp.open("GET", theUrl, true); // true for asynchronous 
   xmlHttp.send(null);
 }
-function wikiImageQuery(query, callback = (printing) => {console.log(printing)}) {
-  theUrl = `https://en.wikipedia.org/w/api.php?action=query&titles=${query}&prop=pageimages&format=json&pithumbsize=100`
-  var xmlHttp = new XMLHttpRequest();
-  // xmlHttp.onreadystatechange = function() { 
-  //     if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-  //         callback(xmlHttp.responseText);
-  // }
-  
-  xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-  xmlHttp.setRequestHeader('Access-Control-Allow-Origin', 'https://civitas2023.netlify.app');
-  xmlHttp.setRequestHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  xmlHttp.onload = function (){
-    console.log(this.response);
-  }
-  xmlHttp.send(null);
+function wikiImageQuery(query, pol, callback = (res, pol) => {pol.setImage(res)}) {
+  var url = "https://en.wikipedia.org/w/api.php"; 
+
+  var params = {
+      action: "query",
+      prop: "pageimages",
+      titles: query,
+      format: "json"
+  };
+
+  url = url + "?origin=*";
+  Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];});
+
+fetch(url)
+    .then(function(response){return response.json();})
+    .then(function(response) {
+      callback(response, pol);
+    })
+    .catch(function(error){console.log(error);});
 }
-function wikiDescQuery(query, callback = (printing) => {return printing}) {
-  theUrl = `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exlimit=1&titles=${query}&explaintext=1&exsectionformat=plain`
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.onreadystatechange = function() { 
-      if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
-          callback(xmlHttp.responseText);
-  }
-  xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-  xmlHttp.send(null);
+function wikiDescQuery(query, pol, callback = (res, pol) => {pol.setDesc(res)}) {
+  var url = "https://en.wikipedia.org/w/api.php"; 
+
+  var params = {
+      action: "query",
+      prop: "extracts",
+      exlimit: "1",
+      titles: query,
+      explaintext: 1,
+      format: "json"
+  };
+
+  url = url + "?origin=*";
+  Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];});
+
+  fetch(url)
+      .then(function(response){return response.json();})
+      .then(function(response) {
+        callback(response, pol);
+      })
+      .catch(function(error){console.log(error);});
 }
 
 const makePoliticians = (pol) => {
-  let constructedPols = [];
+  let constructedPols = allPols;
   const pols = JSON.parse(pol);
   for(division in pols.divisions){
     if(pols.divisions[division]['officeIndices']){
@@ -108,6 +139,4 @@ const makePoliticians = (pol) => {
     }
   }
   constructedPols.sort(comparePols);
-  console.log(constructedPols);
-  return constructedPols;
 }
