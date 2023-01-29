@@ -1,7 +1,6 @@
-const loc = "Acton, MA";
+const loc = "San Antonio, TX";
 let allPols = [];
 
-getPoliticians(loc);
 
 class Politician{
   constructor(name, position, level, power, party, address, city, state, zip, phone, wikipedia){
@@ -120,12 +119,12 @@ const makePoliticians = (pol) => {
           let zip = '';
           let state = '';
           if(pols.officials[official]['address']){
-            address = pols.officials[official].address.line1;
-            if(pols.officials[official].address['line2']) address += " " + pols.officials[official].line2;
-            if(pols.officials[official].address['line3']) address += " " + pols.officials[official].line3;
-            city = pols.officials[official].address.city;
-            state = pols.officials[official].address.state;
-            zip = pols.officials[official].address.zip;
+            address = pols.officials[official].address[0].line1;
+            if(pols.officials[official].address[0]['line2']) address += " " + pols.officials[official].address[0].line2;
+            if(pols.officials[official].address[0]['line3']) address += " " + pols.officials[official].address[0].line3;
+            city = pols.officials[official].address[0].city;
+            state = pols.officials[official].address[0].state;
+            zip = pols.officials[official].address[0].zip;
           }
           let phone = '';
           if(pols.officials[official]['phones'])
@@ -141,22 +140,16 @@ const makePoliticians = (pol) => {
   constructedPols.sort(comparePols);
   list = document.getElementById("dd");
   document.getElementById("dd").innerHTML = "";
-  for (var i = 0; i < allPols.length; i++){                
-      var opt = allPols[i]['name'];  
-      var li = document.createElement("li");
-      var link = document.createElement("a");             
-      var text = document.createTextNode(opt);
-      link.id = i
-      link.appendChild(text);
-      link.href = "#";
-      text.addEventListener("click", render(i));
-      // link.onclick = render(i);
-      li.appendChild(link);
-      list.appendChild(li);
-    }
+  for (var i = 0; i < allPols.length; i++)
+    document.getElementById("dd").innerHTML += `<li><a href='#' onclick='render(${i})'>${allPols[i]['name']}</a></li>`;            
 }
 function render(index) {
   info = document.getElementById(index);
-  console.log(index);
+  document.getElementById('polname').innerHTML = allPols[index].name;
+  document.getElementById('desc').innerHTML = allPols[index].desc.substring(0, 2000);
+  document.getElementById('img').src = allPols[index].image;
+  document.getElementById('phone').innerHTML = allPols[index].phone;
+  document.getElementById('url').innerHTML = allPols[index].wikipedia;
+  document.getElementById('address').innerHTML = allPols[index].address + ', ' + allPols[index].city + ', ' + allPols[index].state;
 }
 
