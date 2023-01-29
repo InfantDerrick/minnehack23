@@ -1,4 +1,4 @@
-function getFactCheck(query, callback = (printing) => {console.log(printing)}) {
+function getFactCheck(query, callback = (printing) => {makeFactCheck(printing)}) {
     // fetch(`https://factchecktools.googleapis.com/v1alpha1/claims:search?languageCode=en-US&maxAgeDays=100&offset=0&query=${query}`)
     //     .then((response)) => response.json())
     //     .then((json) => console.log(json));
@@ -10,5 +10,12 @@ function getFactCheck(query, callback = (printing) => {console.log(printing)}) {
     }
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
-    console.log("hello");
+}
+
+const makeFactCheck = (checks) => {
+    const facts = JSON.parse(checks);
+    console.log(facts);
+    facts.claims.forEach((x) => {
+        console.log(x.claimReview[0].textualRating);
+    });
 }
