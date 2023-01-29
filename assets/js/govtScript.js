@@ -54,7 +54,7 @@ function wikiImageQuery(query, callback = (printing) => {console.log(printing)})
   // }
   
   xmlHttp.open("GET", theUrl, true); // true for asynchronous 
-  xmlHttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+  xmlHttp.setRequestHeader('Access-Control-Allow-Origin', 'https://civitas2023.netlify.app');
   xmlHttp.setRequestHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   xmlHttp.onload = function (){
     console.log(this.response);
