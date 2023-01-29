@@ -1,5 +1,5 @@
 var options = {
-  strings: ["Welcome back to Civitas. \nYou have earned 32 more points since last time!\n The museum restoration project requires your assistance."],
+  strings: ["Welcome back to Civitas. \nYou have earned 32 more points since last time!\nThe museum restoration project requires your assistance."],
   typeSpeed: 20,
   showCursor: false,
 };
