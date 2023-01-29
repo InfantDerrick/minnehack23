@@ -139,4 +139,24 @@ const makePoliticians = (pol) => {
     }
   }
   constructedPols.sort(comparePols);
+  list = document.getElementById("dd");
+  document.getElementById("dd").innerHTML = "";
+  for (var i = 0; i < allPols.length; i++){                
+      var opt = allPols[i]['name'];  
+      var li = document.createElement("li");
+      var link = document.createElement("a");             
+      var text = document.createTextNode(opt);
+      link.id = i
+      link.appendChild(text);
+      link.href = "#";
+      text.addEventListener("click", render(i));
+      // link.onclick = render(i);
+      li.appendChild(link);
+      list.appendChild(li);
+    }
 }
+function render(index) {
+  info = document.getElementById(index);
+  console.log(index);
+}
+
