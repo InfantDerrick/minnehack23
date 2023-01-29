@@ -18,7 +18,7 @@
         <link id="pagestyle" href="assets/css/material-kit.css?v=3.0.0" rel="stylesheet" />
         <link rel="stylesheet" href="assets/css/style.css" rel="stylesheet">
       </head>
-<body>
+<body onclick ="getFactCheck()">
 
     <!-- Navbar -->
     <div class="container position-sticky z-index-sticky top-0">
@@ -110,13 +110,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item mx-2">
-                                    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="news.html">
+                                    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" onclick="getFactCheck()" href="news.html">
                                         <i class="fa-solid fa-newspaper"></i>
-                                        &nbsp;&nbsp;News
+                                        &nbsp;&nbsp;News 
                                     </a>
                                 </li>
                                 <li class="nav-item mx-2">
-                                    <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="forum.html">
                                         <i class="fa-solid fa-bullhorn"></i>
                                         &nbsp;&nbsp;Forum
                                     </a>
@@ -145,15 +144,14 @@
     <!-- End Navbar -->
     <div class="container pt-8">
         <div class="card-group">
-            <div class="card" data-animation="true">
-              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="card mx-4" data-animation="true">
+              <div id="img1" class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <a class="d-block blur-shadow-image">
                   <img src="https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                 </a>
-                <div class="colored-shadow" style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);"></div>
               </div>
               <div class="card-body text-center">
-                <div class="d-flex mt-n6 mx-auto">
+                <div class="d-flex mt-n6 mx-10">
                   <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Refresh">
                     <i class="material-icons text-lg">refresh</i>
                   </a>
@@ -169,23 +167,18 @@
                 </p>
               </div>
               <hr class="dark horizontal my-0">
-              <div class="card-footer d-flex">
-                <p class="font-weight-normal my-auto">$899/night</p>
-                <i class="material-icons position-relative ms-auto text-lg me-1 my-auto">place</i>
-                <p class="text-sm my-auto"> Barcelona, Spain</p>
-              </div>
             </div>
             <div id="accordion">
                 <h2> Local Events! </h2>
-                <div class="card">
+                <div class="card" >
                   <div class="card-header">
                     <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
-                      Collapsible Group Item #1
+                      Local Event #1
                     </a>
                   </div>
                   <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
                     <div class="card-body">
-                      Lorem ipsum..
+                      Living the Legacies of Black History Month (February 2nd)  
                     </div>
                   </div>
                 </div>
@@ -193,12 +186,12 @@
                 <div class="card">
                   <div class="card-header">
                     <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
-                      Collapsible Group Item #2
+                      Local Event #2
                     </a>
                   </div>
                   <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
                     <div class="card-body">
-                      Lorem ipsum..
+                      Music Celebration of African American History (February 4th) 
                     </div>
                   </div>
                 </div>
@@ -206,12 +199,12 @@
                 <div class="card">
                   <div class="card-header">
                     <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
-                      Collapsible Group Item #3
+                      Local Event #3
                     </a>
                   </div>
                   <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
                     <div class="card-body">
-                      Lorem ipsum..
+                      Wishes & More Winter Ball – Viva Las Wishes! (February 11th)  
                     </div>
                   </div>
                 </div>
@@ -219,7 +212,7 @@
               </div>
         <div class="card-group pt-8">
             <div class="card" data-animation="true">
-              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div id="img2" class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <a class="d-block blur-shadow-image">
                   <img src="https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                 </a>
@@ -242,15 +235,10 @@
                 </p>
               </div>
               <hr class="dark horizontal my-0">
-              <div class="card-footer d-flex">
-                <p class="font-weight-normal my-auto">$899/night</p>
-                <i class="material-icons position-relative ms-auto text-lg me-1 my-auto">place</i>
-                <p class="text-sm my-auto"> Barcelona, Spain</p>
-              </div>
             </div>
             <div class="card" data-animation="true">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                <a class="d-block blur-shadow-image">
+                <a class="d-block blur-shadow-image" id="img3">
                   <img src="https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                 </a>
                 <div class="colored-shadow" style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);"></div>
@@ -272,16 +260,11 @@
                 </p>
               </div>
               <hr class="dark horizontal my-0">
-              <div class="card-footer d-flex">
-                <p class="font-weight-normal my-auto">$899/night</p>
-                <i class="material-icons position-relative ms-auto text-lg me-1 my-auto">place</i>
-                <p class="text-sm my-auto"> Barcelona, Spain</p>
-              </div>
             </div>
         </div>
         <div class="card-group pt-8">
             <div class="card" data-animation="true">
-              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+              <div id="img4" class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <a class="d-block blur-shadow-image">
                   <img src="https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                 </a>
@@ -304,15 +287,10 @@
                 </p>
               </div>
               <hr class="dark horizontal my-0">
-              <div class="card-footer d-flex">
-                <p class="font-weight-normal my-auto">$899/night</p>
-                <i class="material-icons position-relative ms-auto text-lg me-1 my-auto">place</i>
-                <p class="text-sm my-auto"> Barcelona, Spain</p>
-              </div>
             </div>
             <div class="card" data-animation="true">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                <a class="d-block blur-shadow-image">
+                <a class="d-block blur-shadow-image" id="img5">
                   <img src="https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg" alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
                 </a>
                 <div class="colored-shadow" style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);"></div>
@@ -334,11 +312,6 @@
                 </p>
               </div>
               <hr class="dark horizontal my-0">
-              <div class="card-footer d-flex">
-                <p class="font-weight-normal my-auto">$899/night</p>
-                <i class="material-icons position-relative ms-auto text-lg me-1 my-auto">place</i>
-                <p class="text-sm my-auto"> Barcelona, Spain</p>
-              </div>
             </div>
         </div>
         </div>

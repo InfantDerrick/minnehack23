@@ -17,13 +17,17 @@ function getFactCheck(callback = (printing) => {render(printing)}) {
 const render = (pol) => {
     const pols = JSON.parse(pol);
     
-    for (let i = 1; i < 6; i++){
-        ti = "title" + i.toString()
-        const e = document.getElementById(ti)
-        d = "desc" + i.toString()
-        const f = document.getElementById(d)
-        console.log(e)
-        console.log(f)
+    for (let i = 0; i < 5; i++){
+        ti = "title" + (i+1).toString();
+        const e = document.getElementById(ti);
+        d = "desc" + (i+1).toString();
+        img = "img" + (i+1).toString();
+        document.getElementById(d).innerText = pols["descriptions"][i];
+        document.getElementById(ti).innerText = pols["titles"][i];
+        document.getElementById(img).innerHTML = '<img src= ' + pols["images"][i] + " alt='img-blur-shadow' class='img-fluid shadow border-radius-lg'" + ">\n"
+        console.log(e);
+        
+        console.log(d);
     }
     
   }
