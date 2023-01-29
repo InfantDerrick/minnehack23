@@ -118,11 +118,10 @@
           <div class="col-lg-6 col-md-7 d-flex justify-content-center flex-column">
             <h1 class="text-white mb-4">Hello, <span id="nameOfUser"></span>!</h1>
             <p class="text-white opacity-8 lead pe-5 me-5"><span id="typed"></span></p>
-            <div class="buttons">
-              <button type="button" class="btn btn-white mt-4">What's new?</button>
-              <button type="button" class="btn btn-white mt-4">How can I help?</button>
-              <button type="button" class="btn btn-white mt-4">Who are you?</button>
-
+            <div class="buttons" id='buttonRow'>
+              <button type="button" id='btn1' class="btn btn-white mt-4">What's new?</button>
+              <button type="button" id='btn2' class="btn btn-white mt-4">How can I help?</button>
+              <button type="button" id='btn3' class="btn btn-white mt-4">Who are you?</button>
             </div>
           </div>
         </div>
@@ -167,10 +166,13 @@
       const analytics = getAnalytics(app);
       const auth = getAuth();
       const db = getFirestore(app);
+      let usr = '';
+      let ops = [];
+      let buttons = [];
       onAuthStateChanged(auth, (user) => {
         if (user) {
           const uid = user.uid;
-          console.log(user.displayName);
+          usr = user.displayName
           const nameRef = doc(db, 'users', user.displayName);
           getDoc(nameRef).then(nameSnap => {
             if(nameSnap.exists()) {
@@ -178,8 +180,18 @@
               document.getElementById('com1').innerHTML = nameSnap.data().coms[0];
               document.getElementById('com2').innerHTML = nameSnap.data().coms[0];
               document.getElementById('com3').innerHTML = nameSnap.data().coms[1];
+              if(usr == 'slicerjeevs'){
+                ops = ['Welcome back to Civitas. \nYou have earned 23 more points since last time!\nI’m excited to share that your previous community engagement\npost regarding the increase in light pollution over the past\nthree weeks near your home in Santa Clara, CA, gained traction.\nIs there any further information about your post you would like to know about',
+                'I am always here for any other questions you might have :)', 'One of the people who interacted with your post, Rohan,\nwanted to connect with you about taking further action regarding the\nelectric tower change following your post.'];
+                buttons=[['What\'s new?','More Info','I want to continue navigating'], ['Are there any other updates?', 'Who are you?', 'Has my request gone through'], ['Take me to the post', 'Thank you!', 'What going on in the world?']]
+              }else{
+                ops = ['Welcome back to Civitas. \nYou have earned 32 more points since last time!\nI’m excited to share that your previous community engagement post regarding the potholes that were near your home\n in Acton, MA, gained traction. Is there any further information about your\npost you would like to know about?',
+                'You had an impressive 70 bookmarks made of your post, and 12 people\nstarted threads talking about your post.', 'You could create a new post about an issue near or\nfar from you that you’re passionate about. Spreading the word is your forte, considering how much interaction\nyou received on your last Forum post.'];
+                buttons=[['What\'s new?','How can I help?','Who are you?'], ['How much interaction did I get?', 'How else can I make an impact?', 'No'], ['Let\'s go!', 'Thank you!', 'What going on in the world?']]
+              }
             }
           });
+          
         } else {
           window.open('/sign-in.html', '_self');
         }
@@ -190,7 +202,22 @@
           console.log('sign out');
         })
       }
+      function progress(){
+        document.getElementById('typed').innerHTML = '';
+        let buts = buttons.shift();
+        document.getElementById('btn1').innerHTML = buts[0];
+        document.getElementById('btn2').innerHTML = buts[1];
+        document.getElementById('btn3').innerHTML = buts[2];
+          var options = {
+              strings: [ops.shift()],
+              typeSpeed: 10,
+              showCursor: false,
+            };
+          var typed = new Typed('#typed', options);
+      }
       document.getElementById("logout").addEventListener("click", logOut);
+      document.getElementById("buttonRow").addEventListener("click", progress);
+      
     </script>
 </body>
 </html>
