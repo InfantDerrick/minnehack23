@@ -19,8 +19,7 @@
         <link rel="stylesheet" href="assets/css/style.css" rel="stylesheet">
       </head>
 <body>
-
-    <!-- Navbar -->
+    <!-- Begin Navbar -->
     <div class="container position-sticky z-index-sticky top-0">
         <div class="row">
             <div class="col-12">
@@ -143,6 +142,39 @@
         </div>
     </div>
     <!-- End Navbar -->
+
+    <style>
+        .carousel-item {
+            height:60rem;
+            background:rgb(0, 0, 0);
+            color: rgb(0, 0, 0);
+            position: relative;
+        }
+        .container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-top: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 50px;
+        }
+
+        .card {
+            background: #1c87c9;
+        }
+
+        .d-block {
+            background: #1c87c9;
+        }
+
+        .container2 {
+            padding-left: 10px;
+        }
+    </style>
+
+    <!-- Begin Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -151,13 +183,127 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://lh3.googleusercontent.com/oEJcvCjyzbJJXwTzSPPYR_JoZnLGSWCk0xatb7zztpFNDkCoOK-3bl59DSFKPbLfSZQCOOGCJzijPQDCDnzHWOkhauXuY1n2W9nFn_0MoVc_g9NOL6q3eOEozu03EYooiBPNeukbUaK9xKgHfw48TwlasXhXAlftzE-FqM_MD-8zN7H_Xi2Mlt3YOQaKTzsuaUlm9APTwPXhjYEdd_UL0z-mGXxGtDe2hmvPDvak0otiou2J-EfG8HPJsQkiCw3b6xZJiV7NIGBUb2khbgjzuMHRDa-bZM4GV9K8PKfbhpOP7M1ydHj3E_kCsh3_TqrkJFRPd4fSbMcTQdxKYGgEeXUJKxRvAgQ4pi4JXLqhZjwp_rjmzlk3JzPmFISChe_jKD9mfekhOP5OPzd5U1B0h19oI1fs6hHrCOPSNsrhavB0z4TnMq_QTz5djEybiTAHbnl5sYS-JypL5-Z-ARdDzf0mAyPOQfGH_3BpGsMKjlEUy63UQAwIAnfNj90okE3CqBoPc3jt_JvJMrD1TYkP5o63Gh2XwqcrfEKR6INrQWyWfJy4mFbQf0lN2lM_XsRqrwtr8n9xpGWBbgD1lFjQwJzpYeHmcWqtjozmfunD6nfa9XcSXL7R2BW_uGak0MGgq5MOeoz1zl6uOrgnfzfZIyD6T2I0GrZkZWKXAEg4JcYHbR-G_uQJZ2-X7Ygi70fwxIqOv-ELcCMwusg9oW2yqFDur-qSiK5mgmcoP2JEspBLQysLo-xbt7NjC0_kNpubOPTSDTgUx7S6Z9EyrUHO6zwSRsUlJ2PLGIbwuJOvY0GWQGJMNZisiTfJcNY8MZuslrwy-icNpzRtvi7TkBRGlFqYlvvmZp0PuR1GE2APfjINraRHZlwZ2LPGfF_65j08W17mLIam6y8scQxAJqBaAOe7vmtV83NKuGQBhlz7e-YgYI1k6W4_51xuwuI-0c-8jda5M3DOdaAsXC9DMFrk22Y=w3374-h2234-no?authuser=0" class="d-block w-100" alt="...">
+            <div class="container">
+                <div class="card" data-animation="true">
+                    <div class="card-header p-0 position-relative mt-n4 mx-auto z-index-2">
+                        <a class="d-block blur-shadow-image">
+                            <img src="https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg"
+                                alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                        </a>
+                        <div class="colored-shadow"
+                            style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);">
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="d-flex mt-n6 mx-auto">
+                            <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" title="Refresh">
+                                <i class="material-icons text-lg">refresh</i>
+                            </a>
+                            <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" title="Edit">
+                                <i class="material-icons text-lg">edit</i>
+                            </button>
+                        </div>
+                        <h5 class="font-weight-normal mt-3">
+                            <a href="javascript:;">Cozy 5 Stars Apartment</a>
+                        </h5>
+                        <p class="mb-0">
+                            The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you
+                            can
+                            enjoy the main night life in Barcelona.
+                        </p>
+                    </div>
+                    <hr class="dark horizontal my-0">
+                    <div class="card-footer d-flex">
+                        <p class="font-weight-normal my-auto">$899/night</p>
+                        <i class="material-icons position-relative ms-auto text-lg me-1 my-auto">place</i>
+                        <p class="text-sm my-auto"> Barcelona, Spain</p>
+                    </div>
+                </div>
+            </div>
           </div>
           <div class="carousel-item">
-            <img src="https://lh3.googleusercontent.com/hHwtRUUp3GyyY-dl0YAERnhNejDIWPZtLjlYuQQSdh4_d8kvxairawMKNlwt8WKUnNNtuseLgILBxolsO3jiqlwzPXnps8BLPnzjyTAMFFbQi4CdTMaNcKZaIH2Gq8tAdCmi0ZbCsrzt2Vyo8mOkQhP0LAXkJs9vfh9zFab-OZ0VUJ4LQ7sp2GnKgqONKwdPb1aXqXUuZ4Sxgfgo_bHSG2O9BFnYG9-SPoWJX2N5r2Cy_hYswRMdODGCojg4dMF_bFyq2mMYT-R8yfd8k1ki4oIDXh9EMN8SmqSoQ5uw6gBPNQ-mwyG6G1W0ZVyArOkZ87JprI-Drsi1DBVBuqLwT8hNm1bdF3QDi6TSJFmomvRkLpqJxIX9-8IxOyeu_Fpq6bCRMU8IvDNbO8b91F7prjsYIx7vVgJ0Yt0OrnotTNFWCJt5NiKs3e1VJQpZuJYp57je7J8aJB_uegcrrdzDJb_ipLcmZ8YOZbKKqrZi6XaEPPkkmH5G-rWBB4MwGfSt6zp77YDfZfRhGudocnxVYnyZuj8pVBzS92KGMtN4tMzbl1yV2KTsNzho40k3RE-HGGL2A3hG2bDI_TsYP5WDVk-Adl6hXT1wCp7L0fwDYc-EvD9eJ-R0YIdsankLDLOZvp4Z-KPHBecm0YHKjyGMgAep_c6YEkbt4Lv4fg-TSgqq1D8OymZrrVfGmEKrNBh0-j7S79d-bQ6TzXtbnR7LEkrV--KiW0M218un67dfikXtQzXq9lTSOGI5pe6DgVBKoBhD8JlMh_GIukSnTI1WHq8BjmvI5gPUBXWdQpuO_nIZj4bjqTpzRJySK-qQ-pnBvr48stQurpOBzzqpZkJ-8R6q7tldao8r7hRqU976YaK6bQrhyZ6btn63vqH6tpZ-3i1qKF2B-KOu3hazZAPhUecyn60StU0TvwSapjTv0OqszK06qFdaHzs8Pz4CHUzqJd8rnLu_poAEmFK64Bsz4_Q=w3374-h2234-no?authuser=0" class="d-block w-100" alt="...">
+            <div class="container">
+                <div class="card" data-animation="true">
+                    <div class="card-header p-0 position-relative mt-n4 mx-auto z-index-2">
+                        <a class="d-block blur-shadow-image">
+                            <img src="https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg"
+                                alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                        </a>
+                        <div class="colored-shadow"
+                            style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);">
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="d-flex mt-n6 mx-auto">
+                            <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" title="Refresh">
+                                <i class="material-icons text-lg">refresh</i>
+                            </a>
+                            <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" title="Edit">
+                                <i class="material-icons text-lg">edit</i>
+                            </button>
+                        </div>
+                        <h5 class="font-weight-normal mt-3">
+                            <a href="javascript:;">Cozy 5 Stars Apartment</a>
+                        </h5>
+                        <p class="mb-0">
+                            The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you
+                            can
+                            enjoy the main night life in Barcelona.
+                        </p>
+                    </div>
+                    <hr class="dark horizontal my-0">
+                    <div class="card-footer d-flex">
+                        <p class="font-weight-normal my-auto">$899/night</p>
+                        <i class="material-icons position-relative ms-auto text-lg me-1 my-auto">place</i>
+                        <p class="text-sm my-auto"> Barcelona, Spain</p>
+                    </div>
+                </div>
+            </div>
           </div>
           <div class="carousel-item">
-            <img src="https://lh3.googleusercontent.com/IxsI-T60l14mLxmNE8kruaqvHauVzdl7Zn7e6Tb6TZNqdpVN71qmkPp7PfnqtAgywE8_W5T_N-RoqK43IsCN8UYku9BbTisv4D1-jmwV5rpztpundBZyze4R94FjqFiF421a-EB7l3CiwAq4d2JtacRqVS13ecBR5Qo3-k-Do_mZSRHBRjPHv8-blILROR5ZDZNkwVWnx7NsaGBN5SCLIlf-8t1aDCrij6fLGSK-OVVh9CacpmESMAbPBqs676bAG5pQN9_-26r-OEeZq2Ih4kHupMFT52bCmuOyLj1HETxRNJIqo6ZE0xtYAVpMD0peBNUh85fgWpcoXGj5mpqYVs6idscJ2JJ9FHL2nDioKY47ApZ3cRSVUfAQEyzz3dC_sJaL7CaHzeE8Ojcod6YEwyEsGH47pLJm0ngupsal-7IZpNsJfVXZTK-9IAbRg2paAh5BjWPbik2xHT3uwTefqwIGUXVptVgOzkTLTFfIY9_r9gqwsYMOTz_qM_yTSkSVtf9nfxK-XEZmel7rqCo2GpUMe9XFsRVwAlsmbF0EqzQUTl7K8z3e9dOhj0narv8YHJm12ehvbq6lu_6PIaQtYW_Luea5x4wW9HKzf8zNngKzR-oEStmGg-ibSMQdbQmD5jcnWHbkdfHkYKwy5KZkfYHj9_Y52D8tGTjwmMnalw88qCCEuVahOB_ym1XPdj1bmgYbdEkzDMFkmaXTNu9BFN30hL_HAANrGYDhkdxfVHs29SphfM6gyj0u9yozq9f9Z6RQ4lTg0PQaiQSO7eW29-z_ioaZS5nt15tWPVOLdfdZmmJxCaTjkwxGmk-1pZizEXi7VuxdlOEHWaLwVswNEwmSrFEV9hwWFYItiCxlamy51CkA981XJQZhWloYX3WpV6UgFCYgO5h-oUy8-LiXICLlLChoUSIZ33SUd_loZnbKlkwWquDk0aWujGIoyUYyU65LtJD1iV4touah3uJgKGo=w3374-h2234-no?authuser=0" class="d-block w-100" alt="...">
+            <div class="container">
+                <div class="card" data-animation="true">
+                    <div class="card-header p-0 position-relative mt-n4 mx-auto z-index-2">
+                        <a class="d-block blur-shadow-image">
+                            <img src="https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg"
+                                alt="img-blur-shadow" class="img-fluid shadow border-radius-lg">
+                        </a>
+                        <div class="colored-shadow"
+                            style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);">
+                        </div>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="d-flex mt-n6 mx-auto">
+                            <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" title="Refresh">
+                                <i class="material-icons text-lg">refresh</i>
+                            </a>
+                            <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" title="Edit">
+                                <i class="material-icons text-lg">edit</i>
+                            </button>
+                        </div>
+                        <h5 class="font-weight-normal mt-3">
+                            <a href="javascript:;">Cozy 5 Stars Apartment</a>
+                        </h5>
+                        <p class="mb-0">
+                            The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you
+                            can
+                            enjoy the main night life in Barcelona.
+                        </p>
+                    </div>
+                    <hr class="dark horizontal my-0">
+                    <div class="card-footer d-flex">
+                        <p class="font-weight-normal my-auto">$899/night</p>
+                        <i class="material-icons position-relative ms-auto text-lg me-1 my-auto">place</i>
+                        <p class="text-sm my-auto"> Barcelona, Spain</p>
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -168,7 +314,96 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
+    </div>
+    <!-- End Carousel -->
+
+    <div class="container-lg ml-5 mt-2">
+        <div class="row mx-10">
+            <div class="col-sm-3 col-6 mx-auto">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn bg-gradient-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Post Community Initiative
+            </button>
+        
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Community Initiative</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="input-group input-group-outline my-3">
+                              <label class="form-label">Text</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="input-group input-group-outline my-3">
+                              <label class="form-label">Search</label>
+                              <input type="text" class="form-control">
+                            </div>
+                            <div class="input-group input-group-outline my-3">
+                              <label class="form-label">Email/label>
+                              <input type="email" class="form-control">
+                            </div>
+                            <div class="input-group input-group-outline my-3">
+                              <label class="form-label">Url</label>
+                              <input type="url" class="form-control">
+                            </div>
+                            <div class="input-group input-group-outline my-3">
+                              <label class="form-label">Phone</label>
+                              <input type="tel" class="form-control">
+                            </div>
+                            <div class="input-group input-group-outline my-3">
+                              <label class="form-label">Password</label>
+                              <input type="password" class="form-control">
+                            </div>
+                            <div class="input-group input-group-outline my-3">
+                              <label class="form-label">Number</label>
+                              <input type="number" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static my-3">
+                              <label>Datetime</label>
+                              <input type="datetime-local" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static my-3">
+                              <label>Date</label>
+                              <input type="date" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static my-3">
+                              <label>Month</label>
+                              <input type="month" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static my-3">
+                              <label>Week</label>
+                              <input type="week" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static my-3">
+                              <label>Time</label>
+                              <input type="time" class="form-control">
+                            </div>
+                            <div class="input-group input-group-static my-3">
+                              <label>Color</label>
+                              <input type="color" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="example-color-input" class="form-control-label">Color</label>
+                                <input class="form-control" type="color" value="#5e72e4" id="example-color-input">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn bg-gradient-dark mb-0" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn bg-gradient-primary mb-0">Post</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <!--   Core JS Files   -->
     <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
     <script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
