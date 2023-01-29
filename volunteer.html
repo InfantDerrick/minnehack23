@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civitas</title>
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+  <!-- Nucleo Icons -->
+  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/33f8afc26e.js" crossorigin="anonymous"></script>
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+  <!-- CSS Files -->
+  <link id="pagestyle" href="assets/css/material-kit.css?v=3.0.0" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" rel="stylesheet">
+</head>
+  <body>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
+    <script src="assets/js/plugins/parallax.min.js"></script>
+    <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
+    <!--  Google Maps Plugin    -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+    
+    <script src="assets/js/material-kit.min.js?v=3.0.0" type="text/javascript"></script>
+  </body>
+
+  <!-- Navbar -->
+  <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg  blur border-radius-xl mt-4 top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+          <div class="container-fluid px-0">
+            <div class="dropdown">
+              <a href="#" class="btn bg-gradient-light dropdown-toggle " data-bs-toggle="dropdown" id="navbarDropdownMenuLink2">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnwANENjs3gP8ucWvO-eJ9lRUz3sPDY0hNg&usqp=CAU" class="location-icon"/>&nbsp;Civitas: Acton
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                  <li>
+                      <a class="dropdown-item" href="#">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJnwANENjs3gP8ucWvO-eJ9lRUz3sPDY0hNg&usqp=CAU" class="location-icon"/>&nbsp;Acton
+                      </a>
+                  </li>
+                  <li>
+                      <a class="dropdown-item" href="#">
+                        <img src="https://cdn.britannica.com/45/2345-004-CA9B0D10/flag-pine-tree-Massachusetts-state-field-arms-1971.jpg" class="location-icon"/>&nbsp;Massachussetts
+                      </a>
+                  </li>
+                  <li>
+                      <a class="dropdown-item" href="#">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" class="location-icon"/>&nbsp;USA
+                      </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQwwrpehWUb54OxB_P9mj-MN5d4QLgXMcu0w&usqp=CAU" class="location-icon"/>&nbsp;World
+                    </a>
+                </li>
+              </ul>
+            </div>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+              <ul class="navbar-nav navbar-nav-hover ms-auto">
+                <li class="nav-item mx-2">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="volunteer.html">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    &nbsp;&nbsp;Volunteer
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="government.html">
+                    <i class="fa-solid fa-democrat"></i>
+                    &nbsp;&nbsp;Government
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="news.html">
+                    <i class="fa-solid fa-newspaper"></i>
+                    &nbsp;&nbsp;News
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="forum.html">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    &nbsp;&nbsp;Forum
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="impact.html">
+                    <i class="fa-solid fa-hand-fist"></i>
+                    &nbsp;&nbsp;Impact
+                  </a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" href="payitforward.html">
+                    <i class="fa-solid fa-gift"></i>
+                    &nbsp;&nbsp;Pay It Forward
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Container 1: Finding volunteering Opportunities -->
+  <div class="card-deck mx-auto pt-8 pb-8">
+    <!-- Card 1 -->
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top img-fluid" class="card-img-top" src="assets/img/logos/foodbank.svg" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Food Bank Volunteer</h5>
+        <p class="card-text">If you're interested in helping out at a local soup kitchen/food bank, this is just the experience for you!</p>
+        <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top img-fluid" src="assets/img/logos/dogwalking.png" alt="dogwalking">
+      <div class="card-body">
+        <h5 class="card-title">Dog Walkers Needed</h5>
+        <p class="card-text">If you're a dog lover, helping those out in need has never been easier! Helping shelters walk their dogs helps our furry friends feel loved, 
+        and hopefully you'll feel great too.<br><br><br></p>
+        <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
+      </div>
+    </div>
+    <!-- Card 3 -->
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top img-fluid" src="assets/img/logos/habitathumanity.jpg" alt="habitat" >
+      <div class="card-body">
+        <h5 class="card-title">Habitat For Humanity</h5>
+        <p class="card-text">If seeing your hard work directly manifest itself as a positive change in people's lives is your forte, building shelters for people with Habitat
+        for Humanity might just be for you!<br><br><br></p>
+        <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
+      </div>
+    </div>
+    <!-- Card 4 -->
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top img-fluid" src="assets/img/logos/medical.png" alt="medical">
+      <div class="card-body">
+        <h5 class="card-title">Medical Helpers</h5>
+        <p class="card-text">If you enjoy detail-oriented tasks, helping out with important administrative tasks and patient care, medical help is always appreciated with
+        Medical Volunteers International<br><br><br></p>
+        <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top img-fluid" src="assets/img/logos/library.jpg" alt="library">
+      <div class="card-body">
+        <h5 class="card-title">Library Helpers Needed</h5>
+        <p class="card-text">Our public libraries are our greatest resources! With your support we cna keep them up and running!</p>
+        <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Container 2: Interface showing currently enrolled volunteering opportunities -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- Ocean Clean Up Item -->
+      <div class="carousel-item active">
+        <div class="container">
+            <div class="card" data-animation="true">
+                <div class="card-header p-0 position-relative mt-n4 mx-auto z-index-2">
+                    <a class="d-block blur-shadow-image">
+                        <img src="assets/img/bg2.jpg" alt="Ocean clean up" class="img-fluid shadow border-radius-lg">
+                    </a>
+                    <div class="colored-shadow"
+                        style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);">
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <div class="d-flex mt-n6 mx-auto">
+                        <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Refresh">
+                            <i class="material-icons text-lg">refresh</i>
+                        </a>
+                        <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Edit">
+                            <i class="material-icons text-lg">edit</i>
+                        </button>
+                    </div>
+                    <h5 class="font-weight-normal mt-3">
+                        <a href="javascript:;">Ocean cleanup initiative</a>
+                    </h5>
+                    <p class="mb-0">Help clean up the Atlantic Ocean and begin restoring its natural beauty back to what it was!</p>
+                </div>
+                <hr class="dark horizontal my-0">
+                <div class="card-footer d-flex">
+                  <br>
+                  <a href="#" class="btn btn-danger position-absolute bottom-0 start-50 translate-middle">Cancel registration</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Food Bank Item -->
+      <div class="carousel-item">
+        <div class="container">
+            <div class="card" data-animation="true">
+                <div class="card-header p-0 position-relative mt-n4 mx-auto z-index-2">
+                    <a class="d-block blur-shadow-image">
+                        <img src="assets/img/foodbankHelp.jpg" alt="Food bank volunteer" class="img-fluid shadow border-radius-lg">
+                    </a>
+                    <div class="colored-shadow"
+                        style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);">
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <div class="d-flex mt-n6 mx-auto">
+                        <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Refresh">
+                            <i class="material-icons text-lg">refresh</i>
+                        </a>
+                        <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Edit">
+                            <i class="material-icons text-lg">edit</i>
+                        </button>
+                    </div>
+                    <h5 class="font-weight-normal mt-3">
+                        <a href="javascript:;">Food bank volunteer</a>
+                    </h5>
+                    <p class="mb-0">Help us pack the food we receive through donations, and make it easier for us to feed the less fortunate!</p>
+                </div>
+                <hr class="dark horizontal my-0">
+                <div class="card-footer d-flex">
+                  <br>
+                  <a href="#" class="btn btn-danger position-absolute bottom-0 start-50 translate-middle">Cancel registration</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Medical Help Item-->
+      <div class="carousel-item">
+        <div class="container">
+            <div class="card" data-animation="true">
+                <div class="card-header p-0 position-relative mt-n4 mx-auto z-index-2">
+                    <a class="d-block blur-shadow-image">
+                        <img src="assets/img/medicalHelp.jpg" alt="Ocean clean up" class="img-fluid shadow border-radius-lg">
+                    </a>
+                    <div class="colored-shadow"
+                        style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);">
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <div class="d-flex mt-n6 mx-auto">
+                        <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Refresh">
+                            <i class="material-icons text-lg">refresh</i>
+                        </a>
+                        <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Edit">
+                            <i class="material-icons text-lg">edit</i>
+                        </button>
+                    </div>
+                    <h5 class="font-weight-normal mt-3">
+                        <a href="javascript:;">Nursing home volunteer</a>
+                    </h5>
+                    <p class="mb-0">Take a few hours out of your week to spend some time playing games, chatting and sharing meals with our residents!</p>
+                </div>
+                <hr class="dark horizontal my-0">
+                <div class="card-footer d-flex">
+                  <br>
+                  <a href="#" class="btn btn-danger position-absolute bottom-0 start-50 translate-middle">Cancel registration</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- <div class="carousel-item">
+        <img src="https://lh3.googleusercontent.com/hHwtRUUp3GyyY-dl0YAERnhNejDIWPZtLjlYuQQSdh4_d8kvxairawMKNlwt8WKUnNNtuseLgILBxolsO3jiqlwzPXnps8BLPnzjyTAMFFbQi4CdTMaNcKZaIH2Gq8tAdCmi0ZbCsrzt2Vyo8mOkQhP0LAXkJs9vfh9zFab-OZ0VUJ4LQ7sp2GnKgqONKwdPb1aXqXUuZ4Sxgfgo_bHSG2O9BFnYG9-SPoWJX2N5r2Cy_hYswRMdODGCojg4dMF_bFyq2mMYT-R8yfd8k1ki4oIDXh9EMN8SmqSoQ5uw6gBPNQ-mwyG6G1W0ZVyArOkZ87JprI-Drsi1DBVBuqLwT8hNm1bdF3QDi6TSJFmomvRkLpqJxIX9-8IxOyeu_Fpq6bCRMU8IvDNbO8b91F7prjsYIx7vVgJ0Yt0OrnotTNFWCJt5NiKs3e1VJQpZuJYp57je7J8aJB_uegcrrdzDJb_ipLcmZ8YOZbKKqrZi6XaEPPkkmH5G-rWBB4MwGfSt6zp77YDfZfRhGudocnxVYnyZuj8pVBzS92KGMtN4tMzbl1yV2KTsNzho40k3RE-HGGL2A3hG2bDI_TsYP5WDVk-Adl6hXT1wCp7L0fwDYc-EvD9eJ-R0YIdsankLDLOZvp4Z-KPHBecm0YHKjyGMgAep_c6YEkbt4Lv4fg-TSgqq1D8OymZrrVfGmEKrNBh0-j7S79d-bQ6TzXtbnR7LEkrV--KiW0M218un67dfikXtQzXq9lTSOGI5pe6DgVBKoBhD8JlMh_GIukSnTI1WHq8BjmvI5gPUBXWdQpuO_nIZj4bjqTpzRJySK-qQ-pnBvr48stQurpOBzzqpZkJ-8R6q7tldao8r7hRqU976YaK6bQrhyZ6btn63vqH6tpZ-3i1qKF2B-KOu3hazZAPhUecyn60StU0TvwSapjTv0OqszK06qFdaHzs8Pz4CHUzqJd8rnLu_poAEmFK64Bsz4_Q=w3374-h2234-no?authuser=0" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://lh3.googleusercontent.com/IxsI-T60l14mLxmNE8kruaqvHauVzdl7Zn7e6Tb6TZNqdpVN71qmkPp7PfnqtAgywE8_W5T_N-RoqK43IsCN8UYku9BbTisv4D1-jmwV5rpztpundBZyze4R94FjqFiF421a-EB7l3CiwAq4d2JtacRqVS13ecBR5Qo3-k-Do_mZSRHBRjPHv8-blILROR5ZDZNkwVWnx7NsaGBN5SCLIlf-8t1aDCrij6fLGSK-OVVh9CacpmESMAbPBqs676bAG5pQN9_-26r-OEeZq2Ih4kHupMFT52bCmuOyLj1HETxRNJIqo6ZE0xtYAVpMD0peBNUh85fgWpcoXGj5mpqYVs6idscJ2JJ9FHL2nDioKY47ApZ3cRSVUfAQEyzz3dC_sJaL7CaHzeE8Ojcod6YEwyEsGH47pLJm0ngupsal-7IZpNsJfVXZTK-9IAbRg2paAh5BjWPbik2xHT3uwTefqwIGUXVptVgOzkTLTFfIY9_r9gqwsYMOTz_qM_yTSkSVtf9nfxK-XEZmel7rqCo2GpUMe9XFsRVwAlsmbF0EqzQUTl7K8z3e9dOhj0narv8YHJm12ehvbq6lu_6PIaQtYW_Luea5x4wW9HKzf8zNngKzR-oEStmGg-ibSMQdbQmD5jcnWHbkdfHkYKwy5KZkfYHj9_Y52D8tGTjwmMnalw88qCCEuVahOB_ym1XPdj1bmgYbdEkzDMFkmaXTNu9BFN30hL_HAANrGYDhkdxfVHs29SphfM6gyj0u9yozq9f9Z6RQ4lTg0PQaiQSO7eW29-z_ioaZS5nt15tWPVOLdfdZmmJxCaTjkwxGmk-1pZizEXi7VuxdlOEHWaLwVswNEwmSrFEV9hwWFYItiCxlamy51CkA981XJQZhWloYX3WpV6UgFCYgO5h-oUy8-LiXICLlLChoUSIZ33SUd_loZnbKlkwWquDk0aWujGIoyUYyU65LtJD1iV4touah3uJgKGo=w3374-h2234-no?authuser=0" class="d-block w-100" alt="...">
+      </div> -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+</html>
