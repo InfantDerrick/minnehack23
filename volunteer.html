@@ -120,7 +120,7 @@
   </div>
 
   <!-- Container 1: Finding volunteering Opportunities -->
-  <div class="card-deck mx-auto pt-8">
+  <div class="card-deck mx-auto pt-8 pb-8">
     <!-- Card 1 -->
     <div class="card" style="width: 18rem;">
       <img class="card-img-top img-fluid" class="card-img-top" src="assets/img/logos/foodbank.svg" alt="Card image cap">
@@ -172,43 +172,136 @@
   </div>
 
   <!-- Container 2: Interface showing currently enrolled volunteering opportunities -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="assets/img/foodbankHelp.jpg" alt="Food bank volunteer">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Bongal</h5>
-          <p>Hongal</p>
-        </div>
-      </div>
-      <div class="carousel-item  active">
-        <img class="d-block w-100" src="assets/img/bg2.jpg" alt="Ocean clean up">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Pongal</h5>
-          <p>Mongal</p>
-        </div>
-      </div>
-      <div class="carousel-item  active">
-        <img class="d-block w-100" src="assets/img/medicalHelp.jpg" alt="Nursing home volunteer">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Monkala</h5>
-          <p>Pataskaliyan</p>
-        </div>
-      </div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <div class="carousel-inner">
+      <!-- Ocean Clean Up Item -->
+      <div class="carousel-item active">
+        <div class="container">
+            <div class="card" data-animation="true">
+                <div class="card-header p-0 position-relative mt-n4 mx-auto z-index-2">
+                    <a class="d-block blur-shadow-image">
+                        <img src="assets/img/bg2.jpg" alt="Ocean clean up" class="img-fluid shadow border-radius-lg">
+                    </a>
+                    <div class="colored-shadow"
+                        style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);">
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <div class="d-flex mt-n6 mx-auto">
+                        <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Refresh">
+                            <i class="material-icons text-lg">refresh</i>
+                        </a>
+                        <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Edit">
+                            <i class="material-icons text-lg">edit</i>
+                        </button>
+                    </div>
+                    <h5 class="font-weight-normal mt-3">
+                        <a href="javascript:;">Ocean cleanup initiative</a>
+                    </h5>
+                    <p class="mb-0">Help clean up the Atlantic Ocean and begin restoring its natural beauty back to what it was!</p>
+                </div>
+                <hr class="dark horizontal my-0">
+                <div class="card-footer d-flex">
+                  <br>
+                  <a href="#" class="btn btn-danger position-absolute bottom-0 start-50 translate-middle">Cancel registration</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Food Bank Item -->
+      <div class="carousel-item">
+        <div class="container">
+            <div class="card" data-animation="true">
+                <div class="card-header p-0 position-relative mt-n4 mx-auto z-index-2">
+                    <a class="d-block blur-shadow-image">
+                        <img src="assets/img/foodbankHelp.jpg" alt="Food bank volunteer" class="img-fluid shadow border-radius-lg">
+                    </a>
+                    <div class="colored-shadow"
+                        style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);">
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <div class="d-flex mt-n6 mx-auto">
+                        <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Refresh">
+                            <i class="material-icons text-lg">refresh</i>
+                        </a>
+                        <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Edit">
+                            <i class="material-icons text-lg">edit</i>
+                        </button>
+                    </div>
+                    <h5 class="font-weight-normal mt-3">
+                        <a href="javascript:;">Food bank volunteer</a>
+                    </h5>
+                    <p class="mb-0">Help us pack the food we receive through donations, and make it easier for us to feed the less fortunate!</p>
+                </div>
+                <hr class="dark horizontal my-0">
+                <div class="card-footer d-flex">
+                  <br>
+                  <a href="#" class="btn btn-danger position-absolute bottom-0 start-50 translate-middle">Cancel registration</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Medical Help Item-->
+      <div class="carousel-item">
+        <div class="container">
+            <div class="card" data-animation="true">
+                <div class="card-header p-0 position-relative mt-n4 mx-auto z-index-2">
+                    <a class="d-block blur-shadow-image">
+                        <img src="assets/img/medicalHelp.jpg" alt="Ocean clean up" class="img-fluid shadow border-radius-lg">
+                    </a>
+                    <div class="colored-shadow"
+                        style="background-image: url(&quot;https://demos.creative-tim.com/test/material-dashboard-pro/assets/img/products/product-1-min.jpg&quot;);">
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <div class="d-flex mt-n6 mx-auto">
+                        <a class="btn btn-link text-primary ms-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Refresh">
+                            <i class="material-icons text-lg">refresh</i>
+                        </a>
+                        <button class="btn btn-link text-info me-auto border-0" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Edit">
+                            <i class="material-icons text-lg">edit</i>
+                        </button>
+                    </div>
+                    <h5 class="font-weight-normal mt-3">
+                        <a href="javascript:;">Nursing home volunteer</a>
+                    </h5>
+                    <p class="mb-0">Take a few hours out of your week to spend some time playing games, chatting and sharing meals with our residents!</p>
+                </div>
+                <hr class="dark horizontal my-0">
+                <div class="card-footer d-flex">
+                  <br>
+                  <a href="#" class="btn btn-danger position-absolute bottom-0 start-50 translate-middle">Cancel registration</a>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- <div class="carousel-item">
+        <img src="https://lh3.googleusercontent.com/hHwtRUUp3GyyY-dl0YAERnhNejDIWPZtLjlYuQQSdh4_d8kvxairawMKNlwt8WKUnNNtuseLgILBxolsO3jiqlwzPXnps8BLPnzjyTAMFFbQi4CdTMaNcKZaIH2Gq8tAdCmi0ZbCsrzt2Vyo8mOkQhP0LAXkJs9vfh9zFab-OZ0VUJ4LQ7sp2GnKgqONKwdPb1aXqXUuZ4Sxgfgo_bHSG2O9BFnYG9-SPoWJX2N5r2Cy_hYswRMdODGCojg4dMF_bFyq2mMYT-R8yfd8k1ki4oIDXh9EMN8SmqSoQ5uw6gBPNQ-mwyG6G1W0ZVyArOkZ87JprI-Drsi1DBVBuqLwT8hNm1bdF3QDi6TSJFmomvRkLpqJxIX9-8IxOyeu_Fpq6bCRMU8IvDNbO8b91F7prjsYIx7vVgJ0Yt0OrnotTNFWCJt5NiKs3e1VJQpZuJYp57je7J8aJB_uegcrrdzDJb_ipLcmZ8YOZbKKqrZi6XaEPPkkmH5G-rWBB4MwGfSt6zp77YDfZfRhGudocnxVYnyZuj8pVBzS92KGMtN4tMzbl1yV2KTsNzho40k3RE-HGGL2A3hG2bDI_TsYP5WDVk-Adl6hXT1wCp7L0fwDYc-EvD9eJ-R0YIdsankLDLOZvp4Z-KPHBecm0YHKjyGMgAep_c6YEkbt4Lv4fg-TSgqq1D8OymZrrVfGmEKrNBh0-j7S79d-bQ6TzXtbnR7LEkrV--KiW0M218un67dfikXtQzXq9lTSOGI5pe6DgVBKoBhD8JlMh_GIukSnTI1WHq8BjmvI5gPUBXWdQpuO_nIZj4bjqTpzRJySK-qQ-pnBvr48stQurpOBzzqpZkJ-8R6q7tldao8r7hRqU976YaK6bQrhyZ6btn63vqH6tpZ-3i1qKF2B-KOu3hazZAPhUecyn60StU0TvwSapjTv0OqszK06qFdaHzs8Pz4CHUzqJd8rnLu_poAEmFK64Bsz4_Q=w3374-h2234-no?authuser=0" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://lh3.googleusercontent.com/IxsI-T60l14mLxmNE8kruaqvHauVzdl7Zn7e6Tb6TZNqdpVN71qmkPp7PfnqtAgywE8_W5T_N-RoqK43IsCN8UYku9BbTisv4D1-jmwV5rpztpundBZyze4R94FjqFiF421a-EB7l3CiwAq4d2JtacRqVS13ecBR5Qo3-k-Do_mZSRHBRjPHv8-blILROR5ZDZNkwVWnx7NsaGBN5SCLIlf-8t1aDCrij6fLGSK-OVVh9CacpmESMAbPBqs676bAG5pQN9_-26r-OEeZq2Ih4kHupMFT52bCmuOyLj1HETxRNJIqo6ZE0xtYAVpMD0peBNUh85fgWpcoXGj5mpqYVs6idscJ2JJ9FHL2nDioKY47ApZ3cRSVUfAQEyzz3dC_sJaL7CaHzeE8Ojcod6YEwyEsGH47pLJm0ngupsal-7IZpNsJfVXZTK-9IAbRg2paAh5BjWPbik2xHT3uwTefqwIGUXVptVgOzkTLTFfIY9_r9gqwsYMOTz_qM_yTSkSVtf9nfxK-XEZmel7rqCo2GpUMe9XFsRVwAlsmbF0EqzQUTl7K8z3e9dOhj0narv8YHJm12ehvbq6lu_6PIaQtYW_Luea5x4wW9HKzf8zNngKzR-oEStmGg-ibSMQdbQmD5jcnWHbkdfHkYKwy5KZkfYHj9_Y52D8tGTjwmMnalw88qCCEuVahOB_ym1XPdj1bmgYbdEkzDMFkmaXTNu9BFN30hL_HAANrGYDhkdxfVHs29SphfM6gyj0u9yozq9f9Z6RQ4lTg0PQaiQSO7eW29-z_ioaZS5nt15tWPVOLdfdZmmJxCaTjkwxGmk-1pZizEXi7VuxdlOEHWaLwVswNEwmSrFEV9hwWFYItiCxlamy51CkA981XJQZhWloYX3WpV6UgFCYgO5h-oUy8-LiXICLlLChoUSIZ33SUd_loZnbKlkwWquDk0aWujGIoyUYyU65LtJD1iV4touah3uJgKGo=w3374-h2234-no?authuser=0" class="d-block w-100" alt="...">
+      </div> -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 
 
