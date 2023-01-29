@@ -15,6 +15,7 @@ function getFactCheck(query, callback = (printing) => {makeFactCheck(printing);}
 
 const makeFactCheck = (checks) => {
     const facts = JSON.parse(checks);
+    console.log(facts);
     var arr = [];
     if(facts['claims']){
         facts.claims.forEach((x) => {
@@ -25,22 +26,28 @@ const makeFactCheck = (checks) => {
     
     var score = 0;
     var counter = 0;
-    for(rating in arr){
+    for(let i=0; i<arr.length; i++){
         counter = counter + 1;
+        rating = arr[i].toLowerCase();
+        console.log(rating);
         if(rating.includes("true"))
             score = score + 1;
-        else if(rating.includes("false"))
+        else if(rating.includes("false")){
             score = score;
-        else if(!rating.includes("false"))
+            console.log("I AM HERE");
+        }
+        else
             score = score + 0.5;
+        console.log(score);
     }
 
+    console.log("Score" + score);
     score = parseFloat(score) / counter;
     score = score * 100;
     document.getElementById("reply1").style = "width: " + score + "%";
     document.getElementById("reply1num").innerHTML = `${score}%`;
-    console.log(facts);
-    const s = `<p id="articleinfo2">Article matched on: ${facts.claims[0].text}</p>`;
-    console.log(s);
-    document.getElementById("articleinfo2").innerText = s;
+    // console.log(facts);
+    // const s = `<p id="articleinfo2">Article matched on: ${facts.claims[0].text}</p>`;
+    // console.log(s);
+    // document.getElementById("articleinfo2").innerText = s;
 }
