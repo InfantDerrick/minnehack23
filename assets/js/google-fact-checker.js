@@ -39,4 +39,8 @@ const makeFactCheck = (checks) => {
     score = score * 100;
     document.getElementById("reply1").style = "width: " + score + "%";
     document.getElementById("reply1num").innerHTML = `${score}%`;
+    console.log(facts);
+    const s = `<p id="articleinfo2">Article matched on: ${facts.claims[0].text}</p>`;
+    console.log(s);
+    document.getElementById("articleinfo2").innerText = s;
 }
