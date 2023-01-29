@@ -119,64 +119,239 @@
     </div>
   </div>
 
-  <!-- Container 1: Finding volunteering Opportunities -->
-  <div class="card-deck mx-auto pt-8 pb-8">
-    <!-- Card 1 -->
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top img-fluid" class="card-img-top" src="assets/img/logos/foodbank.svg" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Food Bank Volunteer</h5>
-        <p class="card-text">If you're interested in helping out at a local soup kitchen/food bank, this is just the experience for you!</p>
-        <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
-      </div>
-    </div>
-    <!-- Card 2 -->
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top img-fluid" src="assets/img/logos/dogwalking.png" alt="dogwalking">
-      <div class="card-body">
-        <h5 class="card-title">Dog Walkers Needed</h5>
-        <p class="card-text">If you're a dog lover, helping those out in need has never been easier! Helping shelters walk their dogs helps our furry friends feel loved, 
-        and hopefully you'll feel great too.<br><br><br></p>
-        <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
-      </div>
-    </div>
-    <!-- Card 3 -->
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top img-fluid" src="assets/img/logos/habitathumanity.jpg" alt="habitat" >
-      <div class="card-body">
-        <h5 class="card-title">Habitat For Humanity</h5>
-        <p class="card-text">If seeing your hard work directly manifest itself as a positive change in people's lives is your forte, building shelters for people with Habitat
-        for Humanity might just be for you!<br><br><br></p>
-        <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
-      </div>
-    </div>
-    <!-- Card 4 -->
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top img-fluid" src="assets/img/logos/medical.png" alt="medical">
-      <div class="card-body">
-        <h5 class="card-title">Medical Helpers</h5>
-        <p class="card-text">If you enjoy detail-oriented tasks, helping out with important administrative tasks and patient care, medical help is always appreciated with
-        Medical Volunteers International<br><br><br></p>
-        <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
-      </div>
-    </div>
-    <!-- Card 5 -->
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top img-fluid" src="assets/img/logos/library.jpg" alt="library">
-      <div class="card-body">
-        <h5 class="card-title">Library Helpers Needed</h5>
-        <p class="card-text">Our public libraries are our greatest resources! With your support we cna keep them up and running!</p>
-        <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
-      </div>
-    </div>
-  </div>
+  <style>
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+    .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        border-radius: 1rem;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+        display: flex;
+        justify-content: space-between;
+      }
+      
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        border-radius: 1rem;
+      }
+      
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      /* Position the front and back side */
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+        border-radius: 1rem;
+      }
+      
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+        border-radius: 1rem;
+      }
+      
+      /* Style the back side */
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+        border-radius: 1rem;
+      }
 
+      .img-fluid {
+        max-width: 100%;
+        height: 100%;
+        border-radius: 1rem;
+      }
+
+    /*Opportunity 1*/
+    .flip-card:hover {
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        border-width: 2px;
+    }
+
+    /* .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    } */
+
+    /* .card-text{
+        font-size:19px;
+        text-overflow: ellipsis;
+        white-space: wrap;
+        overflow: hidden;
+    } */
+
+    .card-deck {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .break {
+        flex-basis: 100%;
+        height: 0;
+      }
+        
+        /* On mouse-over, add a deeper shadow */
+    /* .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    } */
+
+    /* Add some padding inside the card container */
+    .container {
+        padding: 2px 16px;
+    }
+
+    /* .card { */
+        /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+        /* transition: 0.3s;
+        border-radius: 5px; /* 5px rounded corners */
+    /* } */
+
+    .container {
+        row-gap: 10px;
+    }
+        
+        /* Add rounded corners to the top left and the top right corner of the image */
+    img {
+        border-radius: 5px 5px 0 0;
+    }
+    
+    .carousel-item {
+        padding-top: 5rem;
+    }
+  </style>
+
+  <header class="bg-gradient-dark">
+    <div class="page-header min-vh-75" style="background-image: url('assets/img/volunteerbkgrd.jpg');">
+      <span class="mask bg-gradient-dark opacity-6"></span>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center mx-auto my-auto">
+            <h1 class="text-white">Provide Support through Volunteering</h1>
+            <p class="lead mb-4 text-white opacity-8">Empower your purpose, ignite change through volunteering.</p>
+            <button type="submit" class="btn bg-white text-dark">Connect with Organizations</button>
+            <a href=""><h6 class="text-white mb-2 mt-5">If you'd rather donate to an organization</h6></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+    <section class="py-2">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8 text-start mb-5 mt-5">
+            <h3 class="text-dark z-index-1 position-relative">Available Volunteering Opportunities</h3>
+            <p class="text-dark opacity-8 mb-0">Here are some places looking for volunteers!</p>
+          </div>
+        </div>
+        <!-- Container 1: Finding volunteering Opportunities -->
+        <!-- Card 1 -->
+        <div class="card-deck mx-8 pb-8">
+          <div class="flip-card" style="height: 18rem;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="img-fluid" src="assets/img/logos/foodbank.svg" alt="Card image cap">
+              </div>
+              <div class="flip-card-back">
+                <h5 class="card-title mt-2">Food Bank Volunteer</h5>
+                <p class="card-text">If you're interested in helping out at a local soup kitchen/food bank, this is just the experience for you!</p><br><br><br>
+                <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="flip-card" style="height: 18rem;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="img-fluid" src="assets/img/logos/dogwalking.png" alt="dogwalking">
+              </div>
+              <div class="flip-card-back">
+                <h5 class="card-title mt-2">Dog Walkers Needed</h5>
+                <p class="card-text">If you're a dog lover, helping those out in need has never been easier! Helping shelters walk their dogs helps our furry friends feel loved, 
+                and hopefully you'll feel great too.</p><br><br><br>
+                <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="flip-card" style="height: 18.2rem;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="card-img-top img-fluid" src="assets/img/logos/habitathumanity.jpg" alt="habitat" style="height: 18rem;">
+              </div>
+              <div class="flip-card-back">
+                <h5 class="card-title mt-2">Habitat For Humanity</h5>
+                <p class="card-text mt-2">See the positive change you make in people's lives by building shelters for people with Habitat for Humanity!</p><br><br><br>
+                <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <!-- Break -->
+          <div class="break"></div>
+          <!-- Card 4 -->
+          <div class="flip-card" style="height: 18.2rem;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="card-img-top img-fluid" src="assets/img/logos/medical.png" alt="medical" style="height: 18rem;">
+              </div>
+              <div class="flip-card-back">
+                <h5 class="card-title mt-2">Medical Helpers</h5>
+                <p class="card-text mt-2">If you enjoy detail-oriented tasks, helping support important administrative tasks and patient care join Medical Volunteers International</p><br><br><br>
+                <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 5 -->  
+          <div class="flip-card" style="height: 18.2rem;">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img class="card-img-top img-fluid" src="assets/img/logos/library.jpg" alt="library" style="height: 18rem;">
+              </div>
+              <div class="flip-card-back">
+                <h5 class="card-title mt-2">Library Helpers Needed</h5>
+                <p class="card-text">Our public libraries are our greatest resources! With your support we cna keep them up and running!</p><br><br><br>
+                <a href="#" class="btn btn-primary position-absolute bottom-0 start-50 translate-middle">Sign Up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Spacing between sections -->
+  <div class="bg-dark" style="height: 200px;">
+    <h2 class="text-white text-center my-2" style="padding-top: 60px;">Upcoming events</h2><br>
+  </div>
+  <div class="mx-auto" style="height: 15px;"></div>
   <!-- Container 2: Interface showing currently enrolled volunteering opportunities -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <!-- Ocean Clean Up Item -->
@@ -294,11 +469,11 @@
         <img src="https://lh3.googleusercontent.com/IxsI-T60l14mLxmNE8kruaqvHauVzdl7Zn7e6Tb6TZNqdpVN71qmkPp7PfnqtAgywE8_W5T_N-RoqK43IsCN8UYku9BbTisv4D1-jmwV5rpztpundBZyze4R94FjqFiF421a-EB7l3CiwAq4d2JtacRqVS13ecBR5Qo3-k-Do_mZSRHBRjPHv8-blILROR5ZDZNkwVWnx7NsaGBN5SCLIlf-8t1aDCrij6fLGSK-OVVh9CacpmESMAbPBqs676bAG5pQN9_-26r-OEeZq2Ih4kHupMFT52bCmuOyLj1HETxRNJIqo6ZE0xtYAVpMD0peBNUh85fgWpcoXGj5mpqYVs6idscJ2JJ9FHL2nDioKY47ApZ3cRSVUfAQEyzz3dC_sJaL7CaHzeE8Ojcod6YEwyEsGH47pLJm0ngupsal-7IZpNsJfVXZTK-9IAbRg2paAh5BjWPbik2xHT3uwTefqwIGUXVptVgOzkTLTFfIY9_r9gqwsYMOTz_qM_yTSkSVtf9nfxK-XEZmel7rqCo2GpUMe9XFsRVwAlsmbF0EqzQUTl7K8z3e9dOhj0narv8YHJm12ehvbq6lu_6PIaQtYW_Luea5x4wW9HKzf8zNngKzR-oEStmGg-ibSMQdbQmD5jcnWHbkdfHkYKwy5KZkfYHj9_Y52D8tGTjwmMnalw88qCCEuVahOB_ym1XPdj1bmgYbdEkzDMFkmaXTNu9BFN30hL_HAANrGYDhkdxfVHs29SphfM6gyj0u9yozq9f9Z6RQ4lTg0PQaiQSO7eW29-z_ioaZS5nt15tWPVOLdfdZmmJxCaTjkwxGmk-1pZizEXi7VuxdlOEHWaLwVswNEwmSrFEV9hwWFYItiCxlamy51CkA981XJQZhWloYX3WpV6UgFCYgO5h-oUy8-LiXICLlLChoUSIZ33SUd_loZnbKlkwWquDk0aWujGIoyUYyU65LtJD1iV4touah3uJgKGo=w3374-h2234-no?authuser=0" class="d-block w-100" alt="...">
       </div> -->
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
