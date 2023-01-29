@@ -143,6 +143,29 @@
     </div>
     <!-- End Navbar -->
 
+    <style>
+        .mainPost {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-left: 12%;
+            padding-right: 12%;
+        }
+
+        .divBreak {
+            flex-basis: 100%;
+            height: 0;
+        }
+
+        .subPost {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-left: 25%;
+            padding-right: 25%;
+        }
+    </style>
+
     <header class="bg-gradient-dark">
         <div class="page-header min-vh-75" style="background-image: url('./assets/img/rome-forum.jpeg');">
           <span class="mask bg-gradient-dark opacity-6"></span>
@@ -172,23 +195,38 @@
 
     <!-- Rohan code below this -->
 
-    <div class="card-body shadow-none">
+    <div class="card-body shadow">
         <h3 class="card-title text-center">How much Pongal did you chappad this year?</h3>
-        <p class="card-text" style="padding-left: 17.9rem;">In total your phatass must have eaten quite a lot, so I hope it was yummy!</p>
-        <p class="card-text" style="padding-left: 17.9rem;"><small class="text-muted">Go chappad more</small></p>
+        <div class="mainPost">
+            <div class="divBreak"></div>
+            <div>
+                <p class="card-text" style="padding-left: 17.9rem;">In total your phatass must have eaten quite a lot, so I hope it was yummy!</p>
+            </div>
+            <div class="divBreak"></div>
+            <div>
+                <p class="card-text" style="padding-left: 17.9rem;"><small class="text-muted">Go chappad more</small></p>
+            </div>
         </div>
+        
     </div>
 
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-center mx-auto text-wrap">
-                <h4 class="card-title">My main takeaway from your post above, Derrick, was that it was quite thought provoking</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 24th January 2023 </small></p>
-            </div>
-            <div class="container mx-auto">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">My main takeaway from your post above, Derrick, was that it was quite thought provoking</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 24th January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">Even though many of us tend not to think of the impact we can have on the world around us, it's quite clear that there is
-                        still so much more for us to... <span class="pull-right"></p>
+                    still so much more for us to... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -212,14 +250,21 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-center mx-auto">
-                <h4 class="card-title">I really loved the thought you put into the post you made Derrick, I hope we can all take a moment to really reflect on it</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 23rd January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">I really loved the thought you put into the post you made Derrick!</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 23rd January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">There's just so much that we haven't really considered in terms of what you wrote about. There's just so much left for us to
-                        really think about when we... <span class="pull-right"></p>
+                    really think about when we... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -243,14 +288,21 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-left" style="padding-left: 17.6rem;">
-                <h4 class="card-title">I think you raised some really good points in your message, it was quite a refreshing read</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 21st January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">I think you raised some really good points in your message, it was quite a refreshing read</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 21st January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">If there's a change that we should definitely consider implementing, it's considering how we should make better use of the resources
                         available to us... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -274,14 +326,21 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-left" style="padding-left: 17.6rem;">
-                <h4 class="card-title">I love how you've found your passion, and how much you share with our community!</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 20th January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">I love how you've found your passion, and how much you share with our community!</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 20th January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">It feels like you've really discovered what truly drives and excites you, and you pursue it with all your heart. 
                         This is the key to a fulfilling life... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -305,14 +364,21 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-left" style="padding-left: 17.6rem;">
-                <h4 class="card-title">You really took action with this post Derrick!</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 19th January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">You really took action with this post Derrick!</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 19th January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">It's inspiring how you don't wait for opportunities to come to you. You create them by taking the first step towards your goals,
                         and you continue to take... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -336,14 +402,21 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-left" style="padding-left: 17.6rem;">
-                <h4 class="card-title">Your belief in yourself is truly amazing</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 18th January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">Your belief in yourself is truly amazing</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 18th January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">Have confidence in your abilities and don't let self-doubt hold you back. Believe that you can achieve your goals, and
                         I'm sure that you will... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -367,14 +440,21 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-left" style="padding-left: 17.6rem;">
-                <h4 class="card-title">The way you surround yourself with positivity is awe-inspiring!</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 16th January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">The way you surround yourself with positivity is awe-inspiring!</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 16th January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">Surround yourself with people who support and inspire you, and eliminate negativity from your life. This will help you stay motivated
                         and focused on your goals... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -398,14 +478,21 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-left" style="padding-left: 17.6rem;">
-                <h4 class="card-title">Keep it up Derrick! I love how much you stay focused</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 15th January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">Keep it up Derrick! I love how much you stay focused</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 15th January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">Stay focused on your goals, and don't let distractions get in the way. Stay disciplined and keep your eye on the prize, and you will 
                         achieve great things... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -429,14 +516,21 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-left" style="padding-left: 17.6rem;">
-                <h4 class="card-title">Never give up Derrick!</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 15th January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">Never give up Derrick!</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 15th January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">No matter how difficult it gets, never give up on your dreams. Persistence and determination will help you overcome any 
-                    obstacle and achieve success... <span class="pull-right"></p>
+                        obstacle and achieve success... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -460,13 +554,20 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-left" style="padding-left: 17.6rem;">
-                <h4 class="card-title">I love how you've found your passion, and how much you share with our community!</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 14th January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">I love how you've found your passion, and how much you share with our community!</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 14th January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">It feels like you've really discovered what truly drives and excites you, and you pursue it with all your heart... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -490,14 +591,21 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-left" style="padding-left: 17.6rem;">
-                <h4 class="card-title">"Keep learning!</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 13th January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">Keep learning!</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 13th January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">Keep growing and expanding your knowledge, as it will help you overcome challenges and reach new heights. Embrace new 
-                    experiences and... <span class="pull-right"></p>
+                        experiences and... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
@@ -521,14 +629,21 @@
     </div>
     <div class="card shadow-none w-100 mt-1">
         <div class="card-body">
-            <div class="text-left" style="padding-left: 17.6rem;">
-                <h4 class="card-title">Be grateful for everything we're achieving together!</h4>
-                <p class="card-text center-block"><small class="text-muted">Last reply: 12th January 2023 </small></p>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 col-md-6 col-sm-8 col-lg-6 center-block">
+            <div class="subPost">
+                <div class="text-center mx-auto">
+                    <h4 class="card-title">Be grateful for everything we're achieving together!</h4>
+                </div>
+                <div class="divBreak"></div>
+                <div>
+                    <p class="card-text center-block"><small class="text-muted">Last reply: 12th January 2023 </small></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <p class="card-text">Practice gratitude daily, and appreciate the good things in your life. This will help you maintain a positive outlook and
-                    keep your motivation levels high... <span class="pull-right"></p>
+                        keep your motivation levels high... <span class="pull-right"></p>
+                </div>
+                <div class="divBreak"></div>
+                <div>
                     <a class="item" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-forward-fill" viewBox="0 0 16 16">
                             <path d="m9.77 12.11 4.012-2.953a.647.647 0 0 0 0-1.114L9.771 5.09a.644.644 0 0 0-.971.557V6.65H2v3.9h6.8v1.003c0 .505.545.808.97.557z"/>
